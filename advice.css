@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&family=Inter&display=swap');
+body{
+background-color: hsl(218, 23%, 16%);
+min-height: 100vh;
+place-items: center;
+padding-inline: 1.6rem;
+margin-top: 25px;
+}
+.advice-generator{
+	font-family: 'Fraunces', serif;
+	width: 100%;
+	max-width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	display: grid;
+	grid: max-content 3.2rem/ 1fr;
+	background-color: #a5abb4;
+	border-radius: 15px;
+}
+.advice-generator-output{
+	background-color: hsl(217, 19%, 24%);
+	padding: 40px ;
+	display: flex;
+	gap: 2.4rem;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	grid-row: 1/2;
+	grid-column: 1/2;
+	border-radius: 15px;
+}
+.advice-generator-number{
+	font-weight: 700;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	color: #53ffaa;
+	
+}
+.advice-generator-quote{
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 3.3rem;
+	letter-spacing: 0.025;
+	color:#cee3e9;
+}
+
+@media screen and (min-width:545px){
+	.advice-generator{
+		border-radius: 15px;
+		height: 300px;
+	}
+	.advice-generator-quote{
+		margin-bottom: 1rem;
+		font-size: 20px;
+		line-height: 3.8rem;
+		letter-spacing: -0.03rem;
+	}
+	.advice-generator-divider{
+		display: flex;
+		width: 100%;
+		margin-top: 1rem;
+		padding-top: 15px;
+	}
+	picture > img{
+		margin: auto;
+		width: 100%;
+	}
+	.advice-gen-btn{
+		position: relative;
+		top: 83px;
+		width: 5rem;
+		height: 5rem;
+		background: #53ffaa;
+		border-radius: 50%;
+		grid-row: 2/3;
+		grid-column: 1/2;
+		place-items:  end center;
+		transition: box-shadow 250ms;
+		cursor: pointer;
+		border: none;
+	}
+	.advice-gen-btn:is(:hover){
+		box-shadow: 0px 0px 20px #53ffaa ;
+	}
+	.advice-gen-btn-img{
+		transition: transform 250ms;
+	}
+	.advice-gen-btn:is(:hover)>img{
+		transform: rotate(135deg);
+	}
+}
